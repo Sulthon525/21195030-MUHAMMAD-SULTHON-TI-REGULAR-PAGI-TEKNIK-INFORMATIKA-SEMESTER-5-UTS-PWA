@@ -1,0 +1,56 @@
+{
+  "name": "Profil UTS",
+  "short_name": "PU",
+  "description": "Web ini adalah web profil untuk mendapatkan nilai A pada mata kuliah pemrograman perangkat bergerak",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0074cc",
+  "orientation": "portrait",
+  "permissions": [
+    "notifications"
+  ],
+  "icons": [
+    {
+      "src": "img/Favicon.png",
+      "sizes": "540x360",
+      "type": "image/png"
+    },
+    {
+      "src": "img/Favicon.png",
+      "sizes": "540x360",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Profil Saya",
+      "short_name": "Profil",
+      "url": "/index.html",
+      "icons": [
+        {
+          "src": "img/Favicon.png",
+          "sizes": "540x360",
+          "type": "image/png"
+        },
+        {
+          "src": "img/ProfilSayaIcon96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Tambah Komentar",
+      "short_name": "Komentar",
+      "url": "/index.html#comments",
+      "icons": [
+        {
+          "src": "img/comment-icon.png",
+          "sizes": "129x129",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

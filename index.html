@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="white" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="Favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1>Profil Saya</h1>
+  </header>
+  <br>
+
+  <!-- Tambahkan tombol untuk mengganti mode
+  <button id="theme-toggle">Ubah Mode</button> -->
+
+  <main>
+    <section id="profile">
+      <h2>Data Diri</h2>
+      <img id="profile-image" src="img/Profile.jpg" alt="Foto Sulthon" style="object-position: center;">
+      <table>
+        <tr>
+          <td>Nama</td>
+          <td>= Muhammad Sulthon</td>
+        </tr>
+        <tr>
+          <td>NIM</td>
+          <td>= 21195030</td>
+        </tr>
+        <tr>
+          <td>Kelas</td>
+          <td>= Teknik Informatika Pagi</td>
+        </tr>
+        <tr>
+          <td>Semester</td>
+          <td>= 5 to 6</td>
+        </tr>
+        <tr>
+          <td>Mata Kuliah</td>
+          <td>= Pemrograman Perangkat Bergerak</td>
+        </tr>
+        <tr>
+          <td>Tujuan Belajar</td>
+          <td>
+            = Saya belajar pemrograman mobile agar bisa memperluas peluang karir dan mendapatkan pekerjaan yang bagus di
+            dunia teknologi.
+          </td>
+        </tr>
+      </table>
+
+    </section>
+
+    <section id="comments">
+      <h2>Komentar</h2>
+      <textarea id="commentInput" placeholder="Masukkan komentar Anda"></textarea>
+      <br>
+      <button id="addComment">Tambah Komentar</button>
+      <ul id="commentList"></ul>
+    </section>
+
+    <section id="footer">
+      <pre>
+        Halo, Saya mempunyai keinginan belajar dan belajar dan terus belajar
+        supaya saya bisa memiliki keahlian untuk menjadi porto saya ketika
+        saya melamar suatu pekerjaan, impian saya adalah menjadi bandar investasi.
+      </pre>
+    </section>
+
+  </main>
+  <footer>
+    <p>
+      Created by: Muhammad Sulthon 2023 November 11 <a href="https://www.facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a> | <a href="https://www.twitter.com" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a> | <a href="https://github.com" target="_blank">
+        <i class="fab fa-github-alt"></i>
+      </a> | <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a> | <a href="https://www.linkedin.com" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </p>
+  </footer>
+
+  <!-- Pengimporan file JavaScript Anda -->
+  <script>
+    // Minta izin notifikasi
+    if ('Notification' in window) {
+      Notification.requestPermission()
+        .then(function (permission) {
+          if (permission === 'granted') {
+            showNotification('Selamat datang!', 'Terima kasih telah menggunakan PWA ini.');
+            alert('Baguss bwang');
+          }
+          else if (permission === 'denied') {
+            // Izin diblokir
+            alert('blok kenapa ngak di acc sih njink!');
+          }
+
+
+        });
+
+    }
+
+    // Fungsi untuk menampilkan notifikasi
+    function showNotification(title, message) {
+      if ('Notification' in window && Notification.permission === 'granted') {
+        navigator.serviceWorker.ready.then(function (registration) {
+          registration.showNotification(title, {
+            body: message,
+            icon: '/img/notif.png'
+          });
+        });
+      }
+    }
+  </script>
+  <script src="main.js"></script>
+</body>
+
+</html>
